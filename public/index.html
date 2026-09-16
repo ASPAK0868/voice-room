@@ -1,1 +1,22 @@
-app.use(express.static("Public"));
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Voice Room</title>
+</head>
+<body>
+  <h1>🎙️ Voice Room</h1>
+  <p>Welcome to the Voice Room</p>
+
+  <button id="joinBtn">Join Room</button>
+
+  <script>
+    const joinBtn = document.getElementById("joinBtn");
+
+    joinBtn.addEventListener("click", () => {
+      alert("Welcome to the Voice Room!");
+    });
+  </script>
+</body>
+</html>
