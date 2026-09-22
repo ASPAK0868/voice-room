@@ -1,22 +1,23 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Voice Room</title>
-</head>
-<body>
-  <h1>🎙️ Voice Room</h1>
-  <p>Welcome to the Voice Room</p>
+<div class="box" id="shareLink">
+  https://sharechat.com/chatroom/88f8a01b-8cd6-42c1-ab7b-f8dbab863670?d=n
+</div>
 
-  <button id="joinBtn">Join Room</button>
+<button class="copy-btn" onclick="copyLink()">
+  📋 Copy ShareChat Link
+</button>
 
-  <script>
-    const joinBtn = document.getElementById("joinBtn");
+<script>
+const shareURL =
+"https://sharechat.com/chatroom/88f8a01b-8cd6-42c1-ab7b-f8dbab863670?d=n";
 
-    joinBtn.addEventListener("click", () => {
-      alert("Welcome to the Voice Room!");
-    });
-  </script>
-</body>
-</html>
+async function copyLink() {
+  await navigator.clipboard.writeText(shareURL);
+
+  const btn = document.querySelector(".copy-btn");
+  btn.innerText = "✅ Link Copied!";
+
+  setTimeout(() => {
+    btn.innerText = "📋 Copy ShareChat Link";
+  }, 2000);
+}
+</script>
